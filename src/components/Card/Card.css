@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card > span {
+    font-size: xx-large;
+}

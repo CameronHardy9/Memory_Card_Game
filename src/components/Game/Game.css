@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+.cardContainer {
+    max-width: 1020px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
