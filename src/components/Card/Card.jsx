@@ -1,7 +1,7 @@
 import "./Card.css";
 
 function Card(props) {
-    let arr = [];
+    let cardArr = [];
     const pairs = [];
     for (let v = 1; v <= (props.amount) / 2; v++) {
         pairs.push({
@@ -17,7 +17,7 @@ function Card(props) {
     for (let i = 0; i < props.amount; i++) {
         let rand = Math.floor(Math.random() * pairs.length);
         let [content] = pairs.splice(rand, 1);
-        arr.push(
+        cardArr.push(
             <div
                 key={i}
                 style={{
@@ -29,7 +29,7 @@ function Card(props) {
             </div>
         );
     }
-    return arr;
+    return cardArr;
 }
 
 export default Card;
