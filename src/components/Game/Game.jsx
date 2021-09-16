@@ -13,7 +13,6 @@ class Game extends React.Component {
     }
     clickHandler = (e) => {
         this.clicks ++;
-        let timeoutID;
         switch (true) {
             case this.clicks === 1:
                 this.flipped.push(e.target.firstChild);
@@ -22,15 +21,9 @@ class Game extends React.Component {
             case this.clicks === 2:
                 this.flipped.push(e.target.firstChild);
                 e.target.firstChild.hidden = false;
-                timeoutID = setTimeout(this.matchCheck, 2000);
+                setTimeout(this.matchCheck, 1000);
                 break;
             default:
-                clearTimeout(timeoutID);
-                this.flipped.forEach((i) => {
-                    i.hidden = true;
-                });
-                this.flipped = [];
-                this.clicks = 0;
                 break;
         }
     };
