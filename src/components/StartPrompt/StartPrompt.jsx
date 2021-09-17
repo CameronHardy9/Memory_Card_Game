@@ -23,7 +23,7 @@ class StartPrompt extends React.Component {
         if (this.state.gameStart) {
             display = (
             <div className="gameContainer">
-                <Game cards={this.cards}/>
+                <Game cardCount={this.cards}/>
             </div>
             )
         } else {
