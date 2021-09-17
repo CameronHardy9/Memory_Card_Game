@@ -1,9 +1,9 @@
 import "./Card.css";
 
-function Card(props) {
+function Card(amount) {
     let cardArr = [];
     const pairs = [];
-    for (let v = 1; v <= (props.amount) / 2; v++) {
+    for (let v = 1; v <= (amount) / 2; v++) {
         pairs.push({
             key: v,
             content: `${v}`,
@@ -14,7 +14,7 @@ function Card(props) {
         });
     }
 
-    for (let i = 0; i < props.amount; i++) {
+    for (let i = 0; i < amount; i++) {
         let rand = Math.floor(Math.random() * pairs.length);
         let [content] = pairs.splice(rand, 1);
         cardArr.push(
@@ -25,10 +25,11 @@ function Card(props) {
                 }}
                 className="card"
             >
-                <span id={content.key} hidden>{content.content}</span>
+                <span data-key={i} id={content.key} hidden>{content.content}</span>
             </div>
         );
     }
+    console.log("Arr: ",cardArr)
     return cardArr;
 }
 
